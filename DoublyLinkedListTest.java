@@ -1,3 +1,4 @@
+import java.util.Iterator;
 
 public class DoublyLinkedListTest {
 
@@ -5,34 +6,36 @@ public class DoublyLinkedListTest {
 		
 		// Comment only the test functions you want to run
 		
-		// testPrintEmptyListForward();
-		// testPrintEmptyListBackward();
-		// testEmptyGet();
-		// testAddFirstAndGet();
-		// testAddFirstForwards();
-		// testAddFirstBackwards();
-		// testAddLastAndGet();
-		// testAddLastForwards();
-		// testAddLastBackwards();
-		// testIsEmpty();
-		// testGetLength();
-		// testRemoveFromEmptyList();
-		// testRemoveFromListWithOneElementNegative();
-		// testRemoveFromListWithOneElementPositive();
-		// testRemoveFromListWithTwoElementNegative();
-		// testRemoveFromListWithTwoElementPositive();
-		// testRemoveFromListWithThreeElementNegative();
-		// testRemoveFromListWithThreeElementPositive();
-		// testIterator();
+		//testPrintEmptyListForward();
+		//testPrintEmptyListBackward();
+		//testEmptyGet();
+		//testAddFirstAndGet();
+		//testAddFirstForwards();
+		//testAddFirstBackwards();
+		//testAddLastAndGet();
+		//testAddLastForwards();
+		//testAddLastBackwards();
+		//testIsEmpty();
+		//testGetLength();
+		//testRemoveFromEmptyList();
+		//testRemoveFromListWithOneElementNegative();
+		//testRemoveFromListWithOneElementPositive();
+		//testRemoveFromListWithTwoElementNegative();
+		//testRemoveFromListWithTwoElementPositive();
+		//testRemoveFromListWithThreeElementNegative();
+		//testRemoveFromListWithThreeElementPositive();
+		testIterator();
 		
 
 	}
 	
 	public static void testPrintEmptyListForward() {
-		//TODO
+		DoublyLinkedList l = new DoublyLinkedList<>();
+		l.print();
 	}
 	public static void testPrintEmptyListBackward() {
-		//TODO
+		DoublyLinkedList l = new DoublyLinkedList<>();
+		l.printBackwards();
 	}
 	
 	public static void testEmptyGet() {
@@ -276,7 +279,12 @@ public class DoublyLinkedListTest {
 
 		//TODO	
                 // ADD code to obtain iterator object, then uses it to iterate through the list and print its data.
+
+		Iterator<String> it = list.listIterator(0);
 		
+		while(it.hasNext()){
+			System.out.print(it.next());
+		}
 		System.out.println("-------------- testIterator  ------------:");
 	}
 
